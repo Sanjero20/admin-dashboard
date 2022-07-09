@@ -18,6 +18,7 @@
 body { 
   width: 100vw;
   height: 100vh;
+  /* overflow-x: hidden; */
 }
 
 li {
@@ -55,9 +56,9 @@ img.icon {
 }
 
 .container {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
+  box-sizing: border-box;
+  width: 100;
+  height: 100%; 
   display: grid;
   grid-template-columns: 300px 3fr;
   grid-template-rows: 185px 4fr
@@ -93,7 +94,7 @@ img.icon {
 }
 
 .header {
-  width: 100%;;
+  width: 100%;
   background: var(--lavender-grey);
   display: flex;
   justify-content: center;
@@ -160,7 +161,7 @@ img.icon {
 .buttons button {
   color: white;
   padding: 8px 30px;
-  height: 50px;
+  /* height: 50px; */
   background-color: var(--vallarta-blue);
   border: var(--vallarta-blue);
   border-radius: 30px;
@@ -171,12 +172,18 @@ img.icon {
 }
 
 .content-container {
+  max-width: 100%;
   height: 100%;
-  padding: 10px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
   box-sizing: border-box;
+}
+
+.content-container > div{
+  /* border: 1px solid black; */
+  padding: 20px;
 }
 
 .projects {
@@ -184,10 +191,55 @@ img.icon {
 }
 
 .announcement {
-  height: 100%;
   grid-row: 1 / 2;
+  /* border: 1px solid black; */
 }
 
 .trending  {
   grid-row: 2 / 3;
+  /* border: 1px solid black; */
+}
+
+#myProjects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 10px;
+}
+
+.icon-project > img {
+  width: var(--icon-size);
+}
+
+.proj {
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  height: 300px;
+  background-color: white;
+  position: relative;
+  padding: 10px;
+}
+.icon-project {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.content-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content-sidebar p{
+  font-size: smaller;
+}
+
+.content-announce {
+  background-color: white;
+  border-radius: 20px;
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
