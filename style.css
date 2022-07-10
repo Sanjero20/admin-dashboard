@@ -221,6 +221,15 @@ button:active {
   gap: 20px;
 }
 
+.showcase {
+  padding-top: 10px;
+  width: 100%;
+}
+
+a.project-link {
+  color: black;
+}
+
 .icon-project > img {
   width: var(--icon-size);
 }
@@ -242,6 +251,7 @@ button:active {
 .proj:hover {
   transition: all 0.3s ease;
   transform: scale(1.05);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .icon-project {
   position: absolute;
